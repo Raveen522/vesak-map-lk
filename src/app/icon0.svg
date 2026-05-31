@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" width="512" height="512"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><defs>
+    <!-- Gradients -->
+    <radialGradient id="centerGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="1"></stop>
+      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.9"></stop>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.1"></stop>
+    </radialGradient>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"></stop>
+      <stop offset="100%" stop-color="#d97706"></stop>
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"></stop>
+      <stop offset="100%" stop-color="#7e22ce"></stop>
+    </linearGradient>
+    
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5"></stop>
+      <stop offset="50%" stop-color="#f97316"></stop>
+      <stop offset="100%" stop-color="#c2410c"></stop>
+    </linearGradient>
+
+    <linearGradient id="tasselGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8"></stop>
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.5"></stop>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.0"></stop>
+    </linearGradient>
+    
+    <linearGradient id="tasselPurpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8"></stop>
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.0"></stop>
+    </linearGradient>
+    
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#f59e0b" flood-opacity="0.15"></feDropShadow>
+    </filter>
+  </defs><circle cx="256" cy="200" r="160" fill="url(#centerGlow)" filter="url(#shadow)"></circle><path d="M150 306c-10 30-5 70 0 110h-10l-5-110z" fill="url(#tasselPurpleGrad)"></path><path d="M150 306v120h-6" stroke="#c084fc" stroke-width="2" opacity="0.5"></path><path d="M362 306c10 30 5 70 0 110h10l5-110z" fill="url(#tasselPurpleGrad)"></path><path d="M362 306v120h6" stroke="#c084fc" stroke-width="2" opacity="0.5"></path><path d="M256 350c-15 35-10 80 0 130h-15l-10-130z" fill="url(#tasselGrad)"></path><path d="M256 350c15 35 10 80 0 130h15l10-130z" fill="url(#tasselGrad)"></path><path d="M256 350v130h-8" stroke="url(#goldGrad)" stroke-width="2" opacity="0.7"></path><path d="M106 200c-20 20-15 50-5 80h-8c-10-30-12-60 13-80z" fill="url(#tasselPurpleGrad)"></path><path d="M406 200c20 20 15 50 5 80h8c10-30 12-60-13-80z" fill="url(#tasselPurpleGrad)"></path><path d="M256 50L362 200L256 200Z" fill="url(#orangeGrad)" opacity="0.85"></path><path d="M256 50L150 200L256 200Z" fill="url(#orangeGrad)" opacity="0.75"></path><path d="M256 350L362 200L256 200Z" fill="url(#orangeGrad)" opacity="0.8"></path><path d="M256 350L150 200L256 200Z" fill="url(#orangeGrad)" opacity="0.9"></path><path d="M256 50L150 94L150 200Z" fill="url(#purpleGrad)" opacity="0.9"></path><path d="M256 50L362 94L362 200Z" fill="url(#purpleGrad)" opacity="0.8"></path><path d="M256 350L150 306L150 200Z" fill="url(#purpleGrad)" opacity="0.8"></path><path d="M256 350L362 306L362 200Z" fill="url(#purpleGrad)" opacity="0.9"></path><path d="M256 50L362 94L406 200L362 306L256 350L150 306L106 200L150 94Z" stroke="url(#goldGrad)" stroke-width="8" stroke-linejoin="round"></path><path d="M256 50v300" stroke="url(#goldGrad)" stroke-width="6"></path><path d="M150 94h212" stroke="url(#goldGrad)" stroke-width="6"></path><path d="M150 306h212" stroke="url(#goldGrad)" stroke-width="6"></path><path d="M150 94l212 212" stroke="url(#goldGrad)" stroke-width="4"></path><path d="M150 306l212-212" stroke="url(#goldGrad)" stroke-width="4"></path><path d="M106 200h300" stroke="url(#goldGrad)" stroke-width="4"></path><path d="M256 50L362 94L406 200L362 306L256 350L150 306L106 200L150 94Z" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" stroke-linejoin="round"></path><circle cx="256" cy="200" r="10" fill="#ffffff"></circle><circle cx="256" cy="200" r="24" fill="#ffffff" opacity="0.35"></circle></svg>

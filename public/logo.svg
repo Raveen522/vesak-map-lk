@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <radialGradient id="centerGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#fffbeb" stop-opacity="1" />
+      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.1" />
+    </radialGradient>
+    
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7e22ce" />
+    </linearGradient>
+    
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffedd5" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+
+    <linearGradient id="tasselGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.0" />
+    </linearGradient>
+    
+    <linearGradient id="tasselPurpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.0" />
+    </linearGradient>
+    
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#f59e0b" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Glow Background -->
+  <circle cx="256" cy="200" r="160" fill="url(#centerGlow)" filter="url(#shadow)" />
+
+  <!-- Hanging paper tassels (රැළි) -->
+  <!-- Left Bottom Tassel -->
+  <path d="M150 306c-10 30-5 70 0 110h-10l-5-110z" fill="url(#tasselPurpleGrad)" />
+  <path d="M150 306v120h-6" stroke="#c084fc" stroke-width="2" opacity="0.5" />
+  
+  <!-- Right Bottom Tassel -->
+  <path d="M362 306c10 30 5 70 0 110h10l5-110z" fill="url(#tasselPurpleGrad)" />
+  <path d="M362 306v120h6" stroke="#c084fc" stroke-width="2" opacity="0.5" />
+
+  <!-- Center Bottom Tassel -->
+  <path d="M256 350c-15 35-10 80 0 130h-15l-10-130z" fill="url(#tasselGrad)" />
+  <path d="M256 350c15 35 10 80 0 130h15l10-130z" fill="url(#tasselGrad)" />
+  <path d="M256 350v130h-8" stroke="url(#goldGrad)" stroke-width="2" opacity="0.7" />
+
+  <!-- Side hanging banners -->
+  <path d="M106 200c-20 20-15 50-5 80h-8c-10-30-12-60 13-80z" fill="url(#tasselPurpleGrad)" />
+  <path d="M406 200c20 20 15 50 5 80h8c10-30 12-60-13-80z" fill="url(#tasselPurpleGrad)" />
+
+  <!-- Facet Fills for Octagon -->
+  <!-- Center Diamond (Top Half) -->
+  <path d="M256 50L362 200L256 200Z" fill="url(#orangeGrad)" opacity="0.85" />
+  <path d="M256 50L150 200L256 200Z" fill="url(#orangeGrad)" opacity="0.75" />
+  
+  <!-- Center Diamond (Bottom Half) -->
+  <path d="M256 350L362 200L256 200Z" fill="url(#orangeGrad)" opacity="0.8" />
+  <path d="M256 350L150 200L256 200Z" fill="url(#orangeGrad)" opacity="0.9" />
+
+  <!-- Corner Triangles -->
+  <!-- Top Left -->
+  <path d="M256 50L150 94L150 200Z" fill="url(#purpleGrad)" opacity="0.9" />
+  <!-- Top Right -->
+  <path d="M256 50L362 94L362 200Z" fill="url(#purpleGrad)" opacity="0.8" />
+  <!-- Bottom Left -->
+  <path d="M256 350L150 306L150 200Z" fill="url(#purpleGrad)" opacity="0.8" />
+  <!-- Bottom Right -->
+  <path d="M256 350L362 306L362 200Z" fill="url(#purpleGrad)" opacity="0.9" />
+
+  <!-- Octagon Frame Structure -->
+  <path d="M256 50L362 94L406 200L362 306L256 350L150 306L106 200L150 94Z" stroke="url(#goldGrad)" stroke-width="8" stroke-linejoin="round" />
+  
+  <!-- Inner Frame Ribs -->
+  <path d="M256 50v300" stroke="url(#goldGrad)" stroke-width="6" />
+  <path d="M150 94h212" stroke="url(#goldGrad)" stroke-width="6" />
+  <path d="M150 306h212" stroke="url(#goldGrad)" stroke-width="6" />
+  
+  <!-- Diagonal Ribs -->
+  <path d="M150 94l212 212" stroke="url(#goldGrad)" stroke-width="4" />
+  <path d="M150 306l212-212" stroke="url(#goldGrad)" stroke-width="4" />
+  <path d="M106 200h300" stroke="url(#goldGrad)" stroke-width="4" />
+
+  <!-- Highlight stroke to give it dimension -->
+  <path d="M256 50L362 94L406 200L362 306L256 350L150 306L106 200L150 94Z" stroke="#ffffff" stroke-width="2" stroke-opacity="0.3" stroke-linejoin="round" />
+
+  <!-- Glowing core center light -->
+  <circle cx="256" cy="200" r="10" fill="#ffffff" />
+  <circle cx="256" cy="200" r="24" fill="#ffffff" opacity="0.35" />
+</svg>

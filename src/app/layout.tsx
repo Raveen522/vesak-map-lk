@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: 'Vesak Map LK | Discover Vesak Zones, Lanterns & Dansal in Sri Lanka',
   description:
     'A community-driven map application to locate and confirm Vesak Thoran, lantern displays (Vesak Koodu), and Dansal near you. Pin and confirm locations in real-time!',
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
 };
 
 export default async function RootLayout({

@@ -34,8 +34,8 @@ export default function AppHeader({ session, onLogout }: AppHeaderProps) {
     <header className="sticky top-0 z-[2000] w-full border-b border-slate-200 dark:border-amber-500/10 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-102">
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-amber-500 to-orange-400 text-slate-950 shadow-lg shadow-amber-500/20">
-            <Sparkles className="h-5 w-5 animate-pulse" />
+          <div className="relative flex h-10 w-10 items-center justify-center">
+            <img src="/logo.svg" alt="Vesak Map LK Logo" className="h-10 w-10 object-contain drop-shadow-md" />
           </div>
           <div className="flex flex-col">
             <span className="font-sans text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
