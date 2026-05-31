@@ -15,7 +15,7 @@ alter table public.community_users enable row level security;
 -- 2. Create places table
 create table if not exists public.places (
   id uuid primary key default gen_random_uuid(),
-  category text not null check (category in ('thorana', 'lantern', 'dansal')),
+  category text not null check (category in ('thorana', 'lantern', 'dansal', 'zone')),
   title text not null,
   description text,
   area_name text,

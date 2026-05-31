@@ -45,12 +45,14 @@ export default function PlaceDetail({
   const getCategoryLabel = (cat: string) => {
     if (cat === 'thorana') return 'Vesak Thorana / වෙසක් තොරණ';
     if (cat === 'lantern') return 'Vesak Koodu / Lanterns / වෙසක් කූඩු';
+    if (cat === 'zone') return 'Vesak Zone / වෙසක් කලාප';
     return 'Dansala / දන්සල්';
   };
 
   const getCategoryColor = (cat: string) => {
     if (cat === 'thorana') return 'text-orange-500 dark:text-orange-400';
     if (cat === 'lantern') return 'text-purple-650 dark:text-purple-400';
+    if (cat === 'zone') return 'text-blue-500 dark:text-blue-400';
     return 'text-emerald-600 dark:text-emerald-400';
   };
 

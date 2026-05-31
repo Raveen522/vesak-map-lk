@@ -1,6 +1,6 @@
 export interface MockPlace {
   id: string;
-  category: 'thorana' | 'lantern' | 'dansal';
+  category: 'thorana' | 'lantern' | 'dansal' | 'zone';
   title: string;
   description: string;
   area_name: string;
@@ -32,7 +32,7 @@ export interface MockUser {
 const SEED_PLACES: MockPlace[] = [
   {
     id: "mock-1",
-    category: "lantern",
+    category: "zone",
     title: "Gangarama Buddha Rashmi Vesak Kalapaya",
     description: "Spectacular Vesak lantern display and floating stage events surrounding the Beira Lake.",
     area_name: "Colombo 02",

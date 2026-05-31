@@ -7,19 +7,82 @@ import { tileProvider, defaultMapConfig } from '@/lib/map/tileProvider';
 import { Compass } from 'lucide-react';
 
 // Custom icons generator
-function createPlaceIcon(category: 'thorana' | 'lantern' | 'dansal', trustStatus: string) {
+function createPlaceIcon(category: 'thorana' | 'lantern' | 'dansal' | 'zone', trustStatus: string) {
   let color = '#eab308'; // Default gold
   let svgContent = '';
   
   if (category === 'thorana') {
     color = '#f97316'; // Orange
-    svgContent = `<path d="M12 2L2 7v3h20V7L12 2zm-8 9v8h3v-8H4zm6 0v8h4v-8h-4zm7 0v8h3v-8h-3zM2 20v2h20v-2H2z" fill="currentColor"/>`;
+    svgContent = `
+      <path d="M3 21h18" />
+      <path d="M5 21V11c0-3 3-5 7-5s7 2 7 5v10" />
+      <path d="M9 21v-7c0-1.5 1-2.5 3-2.5s3 1 3 2.5v7" />
+      <path d="M12 2v4" />
+      <path d="M10 6h4" />
+      <path d="M12 6L9 9h6z" />
+      <path d="M4 11h16" />
+      <path d="M4 15h16" />
+      <path d="M6 5L8 7" />
+      <path d="M18 5l-2 2" />
+      <path d="M3 9h2" />
+      <path d="M19 9h2" />
+      <circle cx="12" cy="14" r="1" fill="currentColor" stroke="none" />
+      <circle cx="7" cy="13" r="0.7" fill="currentColor" stroke="none" />
+      <circle cx="17" cy="13" r="0.7" fill="currentColor" stroke="none" />
+    `;
   } else if (category === 'lantern') {
     color = '#a855f7'; // Purple
-    svgContent = `<path d="M12 2l8 6-8 14-8-14 8-6z" fill="currentColor"/>`;
+    svgContent = `
+      <path d="M12 3l6 4v6l-6 4-6-4V7z" />
+      <path d="M12 3v14" />
+      <path d="M6 7h12" />
+      <path d="M6 13h12" />
+      <path d="M6 7l6 6 6-6" />
+      <path d="M6 13l6-6 6 6" />
+      <path d="M12 17v5" />
+      <path d="M10 22h4" />
+      <path d="M6 13v4" />
+      <path d="M5 17h2" />
+      <path d="M18 13v4" />
+      <path d="M17 17h2" />
+      <path d="M6 7l-2 3v3" />
+      <path d="M18 7l2 3v3" />
+    `;
+  } else if (category === 'zone') {
+    color = '#3b82f6'; // Blue
+    svgContent = `
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="7.5" />
+      <circle cx="12" cy="12" r="3" />
+      <circle cx="12" cy="12" r="1" fill="currentColor" stroke="none" />
+      <path d="M12 4.5V9" />
+      <path d="M12 15v4.5" />
+      <path d="M4.5 12H9" />
+      <path d="M15 12h4.5" />
+      <path d="M6.7 6.7l3.18 3.18" />
+      <path d="M14.12 14.12l3.18 3.18" />
+      <path d="M6.7 17.3l3.18-3.18" />
+      <path d="M14.12 9.88l3.18-3.18" />
+      <circle cx="12" cy="2.2" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="21.8" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="2.2" cy="12" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="21.8" cy="12" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="5" cy="5" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="19" cy="19" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="5" cy="19" r="0.8" fill="currentColor" stroke="none" />
+      <circle cx="19" cy="5" r="0.8" fill="currentColor" stroke="none" />
+    `;
   } else if (category === 'dansal') {
     color = '#10b981'; // Emerald
-    svgContent = `<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" fill="currentColor"/>`;
+    svgContent = `
+      <path d="M2 16h5l3-3.5L9.2 11" />
+      <path d="M22 16h-5l-3-3.5l0.8-1.5" />
+      <path d="M9 10h6l-.8 4.5h-4.4z" />
+      <path d="M15 11h1.5c.8 0 .8 1.5 0 1.5H14" />
+      <path d="M10.5 7.5c0-1.5.5-1.5.5-3" />
+      <path d="M12.5 7.5c0-1.5.5-1.5.5-3" />
+      <path d="M14.5 7.5c0-1.5.5-1.5.5-3" />
+    `;
   }
 
   let trustRing = 'border-2 border-slate-900 ring-2 ring-slate-800';
@@ -39,7 +102,7 @@ function createPlaceIcon(category: 'thorana' | 'lantern' | 'dansal', trustStatus
 
   const html = `
     <div class="relative flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 transition-transform active:scale-95 ${trustRing}" style="color: ${color};">
-      <svg viewBox="0 0 24 24" width="20" height="20">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         ${svgContent}
       </svg>
       ${badgeHtml}

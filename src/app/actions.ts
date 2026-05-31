@@ -134,7 +134,7 @@ export async function getPlacesAction(): Promise<ActionResponse<any[]>> {
  * Add a new location pin
  */
 export async function addPlaceAction(placeData: {
-  category: 'thorana' | 'lantern' | 'dansal';
+  category: 'thorana' | 'lantern' | 'dansal' | 'zone';
   title: string;
   description: string;
   areaName: string;

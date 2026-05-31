@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Outer Wheel Rim -->
+  <circle cx="12" cy="12" r="9" />
+  <!-- Inner Wheel Rim -->
+  <circle cx="12" cy="12" r="7.5" />
+  
+  <!-- Central Hub -->
+  <circle cx="12" cy="12" r="3" />
+  <circle cx="12" cy="12" r="1" fill="currentColor" />
+  
+  <!-- 8 Spokes -->
+  <!-- Vertical & Horizontal Spokes (Hub to Inner Rim) -->
+  <path d="M12 4.5V9" />
+  <path d="M12 15v4.5" />
+  <path d="M4.5 12H9" />
+  <path d="M15 12h4.5" />
+  
+  <!-- Diagonal Spokes (Hub to Inner Rim) -->
+  <path d="M6.7 6.7l3.18 3.18" />
+  <path d="M14.12 14.12l3.18 3.18" />
+  <path d="M6.7 17.3l3.18-3.18" />
+  <path d="M14.12 9.88l3.18-3.18" />
+
+  <!-- Outer rim knobs at the ends of the 8 spokes -->
+  <circle cx="12" cy="2.2" r="0.8" fill="currentColor" />
+  <circle cx="12" cy="21.8" r="0.8" fill="currentColor" />
+  <circle cx="2.2" cy="12" r="0.8" fill="currentColor" />
+  <circle cx="21.8" cy="12" r="0.8" fill="currentColor" />
+  <circle cx="5" cy="5" r="0.8" fill="currentColor" />
+  <circle cx="19" cy="19" r="0.8" fill="currentColor" />
+  <circle cx="5" cy="19" r="0.8" fill="currentColor" />
+  <circle cx="19" cy="5" r="0.8" fill="currentColor" />
+</svg>

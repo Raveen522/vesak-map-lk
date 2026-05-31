@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Sparkles, MapPin, Home, Landmark, ShieldAlert, Heart } from 'lucide-react';
+import { Sparkles, MapPin, Home, Landmark, ShieldAlert, Heart, Plus } from 'lucide-react';
 import { getSession } from '@/lib/auth/session';
 
 export default async function HomePage() {
@@ -20,7 +20,7 @@ export default async function HomePage() {
         </div>
 
         {/* Hero title */}
-        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl font-sans leading-[1.15]">
+        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl font-sans leading-[1.15]">
           Discover Vesak displays <br />
           &amp; Dansal in{' '}
           <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 dark:from-amber-400 dark:via-orange-400 dark:to-yellow-300 bg-clip-text text-transparent">
@@ -48,9 +48,10 @@ export default async function HomePage() {
           </Link>
           <Link
             href={session ? '/add' : '/login'}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-4 text-sm font-extrabold text-slate-800 dark:text-slate-200 transition-all hover:scale-102"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:bg-slate-50 dark:hover:bg-slate-800 px-8 py-4 text-sm font-extrabold text-slate-800 dark:text-slate-200 shadow-md dark:shadow-none transition-all hover:scale-102"
           >
-            <span>Pin a Location / ස්ථානයක් එක් කරන්න &rarr;</span>
+            <Plus className="h-4 w-4 text-amber-500 shrink-0" />
+            <span>Pin a Location / ස්ථානයක් එක් කරන්න</span>
           </Link>
         </div>
 
@@ -90,8 +91,33 @@ export default async function HomePage() {
           </div>
         </div>
 
+        {/* Community Contribution CTA section */}
+        <div className="mt-8 rounded-2xl border border-amber-200 dark:border-amber-500/10 bg-gradient-to-br from-amber-500/5 to-orange-500/5 dark:from-amber-500/5 dark:to-orange-500/5 p-6 backdrop-blur-sm text-center shadow-sm">
+          <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400">
+            <Plus className="h-5 w-5" />
+          </div>
+          <h3 className="mt-3 text-lg font-bold text-slate-900 dark:text-white">
+            Add a New Place / අලුත් ස්ථානයක් එක් කරන්න
+          </h3>
+          <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm text-slate-650 dark:text-slate-400 leading-relaxed">
+            Know a Vesak Thoran, Lantern exhibition, or a Dansala not listed on the map? Add it to help others find it!
+            <span className="block mt-1 text-[11px] sm:text-xs text-amber-600 dark:text-amber-500/80 font-medium">
+              ඔබ දන්නා වෙසක් තොරණක්, කූඩු ප්‍රදර්ශනයක් හෝ දන්සලක් සිතියමට එක් කර අනෙක් අයටත් දැකබලා ගැනීමට උදවු වන්න.
+            </span>
+          </p>
+          <div className="mt-4 flex justify-center">
+            <Link
+              href={session ? '/add' : '/login'}
+              className="flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 px-6 py-2.5 text-xs sm:text-sm font-extrabold text-white dark:text-slate-950 shadow-md transition-all hover:scale-102"
+            >
+              <Plus className="h-4 w-4 shrink-0" />
+              <span>Share Location / ස්ථානය බෙදාගන්න</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Disclaimer / notice banner */}
-        <div className="mt-12 rounded-xl border border-amber-100 dark:border-slate-900 bg-amber-50/50 dark:bg-slate-900/20 p-4 text-slate-600 dark:text-slate-400 text-xs flex items-start gap-3 text-left">
+        <div className="mt-8 rounded-xl border border-amber-100 dark:border-slate-900 bg-amber-50/50 dark:bg-slate-900/20 p-4 text-slate-600 dark:text-slate-400 text-xs flex items-start gap-3 text-left">
           <ShieldAlert className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
           <p className="leading-relaxed">
             <span className="font-bold text-slate-800 dark:text-slate-350">Community Notice:</span> This application runs fully on user contributions. Pins are not checked manually by admins. Please look at the pin&apos;s confirmation counts and trust status before planning a visit.

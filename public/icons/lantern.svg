@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Octagonal Frame (Atapattam Outline) -->
+  <path d="M12 3l6 4v6l-6 4-6-4V7z" />
+  
+  <!-- Central structural lines -->
+  <path d="M12 3v14" />
+  <path d="M6 7h12" />
+  <path d="M6 13h12" />
+  
+  <!-- Facet diagonals to form the Atapattam diamond faces -->
+  <path d="M6 7l6 6 6-6" />
+  <path d="M6 13l6-6 6 6" />
+
+  <!-- Hanging paper tassels / strings (රැළි) -->
+  <!-- Center bottom tassel -->
+  <path d="M12 17v5" />
+  <path d="M10 22h4" />
+  
+  <!-- Left bottom tassel -->
+  <path d="M6 13v4" />
+  <path d="M5 17h2" />
+  
+  <!-- Right bottom tassel -->
+  <path d="M18 13v4" />
+  <path d="M17 17h2" />
+  
+  <!-- Side hanging banners -->
+  <path d="M6 7l-2 3v3" />
+  <path d="M18 7l2 3v3" />
+</svg>
