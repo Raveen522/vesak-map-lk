@@ -37,6 +37,7 @@ export default function AddPlaceForm() {
   const [rawTime, setRawTime] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [isMapExpanded, setIsMapExpanded] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const formatTime12Hour = (time24: string): string => {
     if (!time24) return '';
@@ -104,14 +105,35 @@ export default function AddPlaceForm() {
       });
 
       if (res.success) {
-        alert('Location pinned successfully!');
-        router.push('/map');
-        router.refresh();
+        setIsSuccess(true);
+        setTimeout(() => {
+          router.push('/map');
+          router.refresh();
+        }, 1500);
       } else {
         setError(res.error || 'Something went wrong.');
       }
     });
   };
+
+  if (isSuccess) {
+    return (
+      <div className="mx-auto max-w-md px-4 py-16 text-center flex flex-col items-center justify-center min-h-[60vh]">
+        <div className="h-16 w-16 bg-emerald-500/10 text-emerald-500 rounded-full flex items-center justify-center mb-6 border border-emerald-500/20 shadow-lg shadow-emerald-500/10 scale-110 animate-bounce">
+          <Check className="h-8 w-8 stroke-[3]" />
+        </div>
+        <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
+          Location Pinned Successfully!
+        </h2>
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">
+          ස්ථානය සාර්ථකව එක් කරන ලදී!
+        </p>
+        <p className="text-[10px] text-slate-400 dark:text-slate-600 mt-6 animate-pulse">
+          Redirecting you to the map...
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-4 text-slate-800 dark:text-slate-200">
